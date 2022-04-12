@@ -58,3 +58,24 @@ Easily start your RESTful Web Services
 ## Run Serverless Function with Cloud Events
 
 curl -v <SERVERLESS_ROUTE> -H "Content-Type:application/json" -H "Ce-Id:1" -H "Ce-Source:code-with-quarkus" -H "Ce-Type:dzone.refcard.quarkus" -H "Ce-1.0" -d "{\"input\": \"QUARKUS WITH CLOUDEVENT\"}\""
+
+## GETTING STARTED WITH QUARKUS CLI
+## For Linux, macOS, and Windows (using WSL or bash compatible shell like Cygwin or MinGW)
+curl -Ls https://sh.jbang.dev | bash -s - trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/
+curl -Ls https://sh.jbang.dev | bash -s - app install --fresh --force quarkus@quarkusio
+
+## For Windows using Powershell
+iex "& { $(iwr https://ps.jbang.dev) } trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/"
+iex "& { $(iwr https://ps.jbang.dev) } app install --fresh --force quarkus@quarkusio"
+
+## Create a Quarkus Application
+quarkus create && cd code-with-quarkus
+
+## Run the application in dev mode
+quarkus dev
+
+## Build the application
+quarkus build
+
+## Add Extension to the exising list
+quarkus extension add <extension>
