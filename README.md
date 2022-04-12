@@ -54,3 +54,7 @@ If you want to learn more about building native executables, please consult http
 Easily start your RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+
+## Run Serverless Function with Cloud Events
+
+curl -v <SERVERLESS_ROUTE> -H "Content-Type:application/json" -H "Ce-Id:1" -H "Ce-Source:code-with-quarkus" -H "Ce-Type:dzone.refcard.quarkus" -H "Ce-1.0" -d "{\"input\": \"QUARKUS WITH CLOUDEVENT\"}\""
